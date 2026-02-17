@@ -1,3 +1,3 @@
-from . import greeting
+from . import basic, mine
 
-__all__ = ["greeting"]
+__all__ = ["basic", "mine"]

@@ -7,7 +7,7 @@ from dotenv import load_dotenv
 import asyncio
 import logging
 
-from handlers import greeting
+from handlers import basic, mine
 
 load_dotenv()
 TOKEN = os.getenv('BOT_TOKEN')
@@ -22,7 +22,8 @@ bot = Bot(
 )
 dispatcher = Dispatcher()
 
-dispatcher.include_router(greeting.router)
+dispatcher.include_router(basic.router)
+dispatcher.include_router(mine.router)
 
 
 async def on_startup():
